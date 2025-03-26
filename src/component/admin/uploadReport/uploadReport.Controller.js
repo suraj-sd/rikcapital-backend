@@ -45,7 +45,7 @@ uploadReport.addReport = async (req, res) => {
       });
     }
 
-    const addData = new uploadReportSchemaa({
+    const addData = new uploadReportSchema({
       BSE_code: req.body.BSE_code,
       name: req.body.name,
       [quarter]: reports,
@@ -122,7 +122,7 @@ uploadReport.updateReport = async (req, res) => {
       )
       .filter(Boolean);
 
-    const updatedData = await uploadReportSchemaa.findByIdAndUpdate(
+    const updatedData = await uploadReportSchema.findByIdAndUpdate(
       _id,
       { $set: { [quarter]: reports } },
       { new: true }
