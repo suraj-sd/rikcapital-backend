@@ -39,7 +39,9 @@ app.use("/uploads", express.static("uploads"));
 app.set("view engine", "ejs");
 
 var index = require("./src/routes/index")(app);
-
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
 // Start Server
 app.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:${PORT}`);
