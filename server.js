@@ -9,7 +9,7 @@ const app = express();
 // Database Connection
 require("./db/conn");
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 1155;
 
 // Middleware
 app.use(bodyParser.json({ limit: "50mb" }));
