@@ -44,3 +44,4 @@ var index = require("./src/routes/index")(app);
 app.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
+// git remote add origin https://github.com/suraj-sd/rikcapital-backend.git
